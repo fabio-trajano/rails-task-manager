@@ -1,0 +1,29 @@
+<div class="container w-50 text-center mt-5">
+  <h2><%= @task.title %></h2>
+  <h3><%= @task.details %></h3>
+  <% if @task.completed %>
+  <p><%= 'The task is completed' %></p>
+  <% else %>
+  <p><%= 'The task is NOT completed' %></p>
+  <% end %>
+</div>
+
+<div class="container w-50">
+  <div class="row justify-content-center">
+    <div class="col-4 text-center">
+      <%= link_to "Edit task", edit_path, class: "btn btn-primary mt-3" %>
+    </div>
+    <div class="col-4 text-center">
+      <%= link_to "Delete task",
+        destroy_path(@task.id),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+        class: "btn btn-danger mt-3"
+      %>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-8 text-center">
+      <%= link_to "Back to list", tasks_path, class: "btn btn-secondary mt-3" %>
+    </div>
+  </div>
+</div>

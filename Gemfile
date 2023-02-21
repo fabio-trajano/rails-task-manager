@@ -44,6 +44,9 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
+# boostrap
+gem "bootstrap", "~> 5.0"
+gem "bootstrap_form", "~> 5.1"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
